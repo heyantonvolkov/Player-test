@@ -23,6 +23,8 @@
 .header {
 	height: 50px;
 	background-color: #1f1b1b;
+	width: 100vw;
+	position: fixed;
 }
 
 .logo {
@@ -122,12 +124,13 @@
 
 
 .hero {
-	height: 610px;
+	height: 100vh;
 	background-color: #1f1b1b;
 	background-image: url("img/background.png");
-	padding: 15px 0 15px;
+	padding: 12vh 0 75px;
 	background-position: center;
 	background-size: cover;
+
 }
 
 .hero-songblock {
@@ -249,6 +252,10 @@
 .footer {
 	height: 60px;
 	background-color: #1f1b1b;
+	width: 100vw;
+	margin: -60px 0 0;
+	position: fixed;
+	z-index: +2;
 }
 
 .footer-song-pic {
