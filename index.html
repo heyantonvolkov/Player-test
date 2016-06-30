@@ -10,12 +10,12 @@
     <header class="header">
       <div class="container">
         <img src="img/ui/logo.png" alt="" class="logo">
-        <button class="header-btn header-popular header-btn-active">Popular</button>
-        <button class="header-btn header-favourite">My favourite</button>
-        <input type="text" class="header-search" value="Search">
+        <a class="header-btn header-popular header-btn-active">Popular</a>
+        <a class="header-btn header-favourite">My favourite</a>
+        <input type="text" class="header-search" placeholder="Search">
         <img class="header-search-icon" src="img/ui/search-icon.png">
-        <div class="header-login">Login</div>
-        <div class="header-btn header-about">About</div>
+        <a class="header-login">Login</a>
+        <a class="header-btn header-about">About</a>
       </div>
     </header>
     <div class="hero">
@@ -23,16 +23,14 @@
 
       <!-- ____________________________________________ songblocks ___________________ -->
 
-        <div class="hero-songblock">
+        <div class="hero-songblock is-playing">
           <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song1-back.png">
           <div class="hero-songblock-underblock">
             <p class="hero-songblock-jenre">Pop Music</p>
           </div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
+          <div class="hero-songblock-bitrate"></div>
+          <a class="hero-songblock-play"></a>
+          <a class="hero-songblock-pause"></a>
         </div>
 
         <div class="hero-songblock">
@@ -155,7 +153,7 @@
       <div class="container">
         <div class="footer-song-pic"></div>
           <div class="footer-song-info">
-           <div class="hero-songblock-bitrate footer-bitrate"></div>
+           <div class="footer-bitrate"></div>
            <p class="footer-song footer-song">You're the one I need [Particular...</p>
            <p class="footer-controls footer-prev">--</p>
            <p class="footer-song footer-singer">Barry White</p>
@@ -171,6 +169,7 @@
         <img class="footer-soundicon" src="img/ui/footer-soundicon.png">
       </div>
     </footer>
-    <script src="/assets/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
