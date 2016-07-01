@@ -187,7 +187,7 @@
 	margin: -195px 0 0 61px;
 	display: none;
 	cursor: pointer;
-	z-index: 4;
+	z-index: +4;
 }
 
 .hero-songblock-play:before {
@@ -209,7 +209,7 @@
 	margin: -191px 0 0 65px;
 	display: none;
 	cursor: pointer;
-	z-index: 5;
+	z-index: +5;
 }
 
 .hero-songblock-pause:after {
@@ -229,7 +229,7 @@
 	position: absolute;
 	margin: -250px 0 0 10px;
 	display: none;
-	z-index: 3;
+	z-index: 1;
 }
 
 .hero-songblock-bitrate:before {
@@ -340,6 +340,16 @@
 	background-image: url("img/ui/footer-pause-white.png");
 	position: absolute;
 	margin: 9px 0 0 11px;
+}
+
+.footer-btn-new {
+	margin: -37px 0 0 660px;
+	width: 37px;
+	height: 37px;
+	border-radius: 37px;
+	background-color: red;
+	border: 2px solid #757575;
+	cursor: pointer;
 }
 
 .footer-soundbar {
