@@ -4,6 +4,9 @@ $(document).ready(function() {
   
   var songTemplate = Handlebars.compile($("#song-template").html());
   $('.hero .container').html(songTemplate({songs: songs}));
+
+  var playerTemplate = Handlebars.compile($("#player-ui-template").html());
+  $('.footer-song-info').html(playerTemplate(songs[0]));
  
 
   $(".hero-songblock-play").click(function(){
@@ -21,7 +24,7 @@ $(document).ready(function() {
   function setSongInfo(track, band, imgUrl) {
     $(".footer-songname").text(track);
     $(".footer-singer").text(band);
-    $(".footer-song-pic").attr(src, 'imgUrl');
+    $(".footer-song-pic").attr("src", imgUrl);
   }
 
   $(".hero-songblock-pause").click(function(){

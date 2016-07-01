@@ -21,27 +21,12 @@
     <div class="hero">
       <div class="container">
 
-      <!-- ____________________________________________ songblocks ___________________ -->
-
-        
-
-
-      <!-- ____________________________________________ songblocks ___________________ -->
-
       </div>
     </div>
 
     <footer class="footer">
       <div class="container">
-        <div class="footer-song-pic"></div>
-          <div class="footer-song-info">
-           <div class="footer-bitrate"></div>
-           <p class="footer-song footer-songname">You're the one I need [Particular...</p>
-           <p class="footer-controls footer-prev">--</p>
-           <p class="footer-song footer-singer">Barry White</p>
-           <p class="footer-controls footer-next">+</p>
-           <p class="footer-songadress">VKontakte Public's Name &#9733</p>
-          </div>
+        <div class="footer-song-info"></div>
         <img class="footer-numlist" src="img/ui/footer-numlist.png">
         <div class="footer-control-btn"></div>
         <div class="footer-btn-new"></div>
@@ -73,6 +58,15 @@
      {{/each}}
     </script>
 
+    <script id="player-ui-template" type="text/x-handlebars-template">
+            <img class="footer-song-pic" src={{imgUrl}}>
+           <div class="footer-bitrate"></div>
+           <p class="footer-song footer-songname">{{track}}</p>
+           <p class="footer-controls footer-prev">--</p>
+           <p class="footer-song footer-singer">{{band}}</p>
+           <p class="footer-controls footer-next">+</p>
+           <p class="footer-songadress">VKontakte Public's Name &#9733</p>
+    </script>
 
 
   </body>

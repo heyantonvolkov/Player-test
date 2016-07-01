@@ -289,14 +289,12 @@
 .footer-song-pic {
 	width: 36px;
 	height: 36px;
-	background-image: url("img/songs/song2-back.png");
-	background-size: cover;
 	float: left;
-	margin: 12px 0 0;
+	margin: -2px 10px 0 0;
 }
 
 .footer-song-info {
-	width: 360px;
+	width: 410px;
 	height: 32px;
 	margin: 15px 0 0 10px;
 	float: left;
@@ -323,13 +321,14 @@
 	font-size: 28px;
 	letter-spacing: -5px;
 	cursor: pointer;
+	display: block;
 }
 
 .footer-songadress {
 	color: #757575;
 	font-size: 11px;
-	float: left;
-	margin: -6px 0 0 0;
+	position: absolute;
+	margin: 17px 0 0 45px;
 }
 
 .footer-numlist {
