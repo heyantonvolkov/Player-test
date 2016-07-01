@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+  var theTemplateScript = $('#song-template').html();
+
+  var theTemplate = Handlebars.compile(theTemplateScript);
+
+  var songContext = songs;
+
+  var theCompiledHtml = theTemplate(songContext);
+
+  $('.hero .container').html(theCompiledHtml);
+
+
+  
+
   $(".hero-songblock-play").click(function(){
     $(".hero-songblock").removeClass("is-playing");
     var blockIndex = $(this).parent().index();
@@ -16,7 +29,7 @@ $(document).ready(function() {
 
 
   $(".footer-btn-new").click(function() {
-    $('<div class="hero-songblock">lol</div>').appendTo(".hero .container");
+    $('<div ="third">Третий</div>').appendTo(".hero .container");
   });
 
 

@@ -23,125 +23,7 @@
 
       <!-- ____________________________________________ songblocks ___________________ -->
 
-        <div class="hero-songblock is-playing">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song1-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Pop Music</p>
-          </div>
-          <div class="hero-songblock-bitrate"></div>
-          <a class="hero-songblock-play"></a>
-          <a class="hero-songblock-pause"></a>
-        </div>
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song2-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Radionite</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song3-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Pop Music</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song4-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Music is life</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song5-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Pop Music</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-      
-      <!-- ____________________________________________ songblocks ___________________ -->  
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song6-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Pop Music</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song7-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Pop Music</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-
-        <div class="hero-songblock is-playing">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song8-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Pop Music</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song9-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Pop Music</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
-
-        <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src="img/songs/song10-back.png">
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">Drum'n'Bass</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
-        </div>
+        
 
 
       <!-- ____________________________________________ songblocks ___________________ -->
@@ -172,6 +54,29 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="data2.js"></script>
+    <script type="text/javascript" src="handlebars.js"></script>
     <script src="script.js"></script>
+    
+
+
+    <script id="song-template" type="text/x-handlebars-template">
+     {{each songs}}
+      <div class="hero-songblock">
+          <img class="hero-songblock-pic hero-songblock-pic-top" src={{imgUrl}}>
+          <div class="hero-songblock-underblock">
+            <p class="hero-songblock-jenre">{{songJenre}}</p>
+          </div>
+          <div class="hero-songblock-play"></div>
+          <div class="hero-songblock-pause"></div>
+          <div class="hero-songblock-gradient">
+            <div class="hero-songblock-bitrate"></div>
+          </div>
+        </div>
+     {{/each}}
+    </script>
+
+
+
   </body>
 </html>
