@@ -3,7 +3,8 @@ var songs = [
     track: 'We are the champions', 
     band: 'qween', 
     imgUrl: 'img/songs/song1-back.png', 
-    songJenre: 'Pop Music'
+    songJenre: 'Pop Music',
+    songUrl: 'https://psv4.vk.me/c611817/u124259152/audios/4ba64b9d8f2a.mp3?extra=EF0gWlTUTn3G8clANC8nGvkmovO4-tXPZGRDaRTdIFyOl-TLNSEOqizK5DIkOi3NX7EwJWrcLQhsc01WkiixN5cNhjJ-YCq-mLCX4xJ6PDboZoZ-3hWlc5t1prpYNz4LqDkG'
   },
   {
     track: 'Rich Bitch', 
