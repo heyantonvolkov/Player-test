@@ -59,9 +59,8 @@
     <script src="script.js"></script>
     
 
-
     <script id="song-template" type="text/x-handlebars-template">
-     {{each songs}}
+     {{#each songs}}
       <div class="hero-songblock">
           <img class="hero-songblock-pic hero-songblock-pic-top" src={{imgUrl}}>
           <div class="hero-songblock-underblock">
@@ -69,9 +68,7 @@
           </div>
           <div class="hero-songblock-play"></div>
           <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-gradient">
-            <div class="hero-songblock-bitrate"></div>
-          </div>
+          <div class="hero-songblock-bitrate"></div>
         </div>
      {{/each}}
     </script>

@@ -1,17 +1,18 @@
 $(document).ready(function() {
 
-  var theTemplateScript = $('#song-template').html();
 
+  var theTemplateScript = $("#song-template").html();
+
+  // Compile the template
   var theTemplate = Handlebars.compile(theTemplateScript);
 
-  var songContext = songs;
+  // Define our data object
+  var context= songs;
+  console.log(context[5]);
+  var theCompiledHtml = theTemplate(context);
 
-  var theCompiledHtml = theTemplate(songContext);
+  $('.hero .container').append(theCompiledHtml);
 
-  $('.hero .container').html(theCompiledHtml);
-
-
-  
 
   $(".hero-songblock-play").click(function(){
     $(".hero-songblock").removeClass("is-playing");
@@ -27,10 +28,6 @@ $(document).ready(function() {
     $(".footer-song-pic").attr(src, imgUrl);
   }
 
-
-  $(".footer-btn-new").click(function() {
-    $('<div ="third">Третий</div>').appendTo(".hero .container");
-  });
 
 
 });
