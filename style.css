@@ -171,7 +171,7 @@
 	display: block;
 	width: 14px;
 	height: 8px;
-	background: url("img/songs/song-vk-icon.png");
+	background: url("img/ui/song-vk-icon.png");
 	margin: 2px 0 0 45px;
 	position: absolute;
 }
@@ -195,7 +195,7 @@
 	display: block;
 	width: 21px;
 	height: 24px;
-	background: url("img/songs/song-play.png");
+	background: url("img/ui/song-play.png");
 	position: absolute;
 	margin: 26px 0 0 30px;
 }
@@ -217,7 +217,7 @@
 	display: block;
 	width: 14px;
 	height: 20px;
-	background: url("img/songs/song-pause.png");
+	background: url("img/ui/song-pause.png");
 	position: absolute;
 	margin: 26px 0 0 28px;
 }
@@ -263,6 +263,15 @@
 	z-index: 1;
 }
 
+.is-playing .hero-songblock-underblock {
+	background-color: white;
+}
+
+.is-playing .hero-songblock-jenre {
+	color: black;
+	font-weight: bold;
+}
+
 .is-paused .hero-songblock-play{
 	display: block;
 	z-index: 2;
@@ -275,6 +284,15 @@
 .is-paused .hero-songblock-bitrate {
 	display: block;
 	z-index: 1;
+}
+
+.is-paused .hero-songblock-underblock {
+	background-color: white;
+}
+
+.is-paused .hero-songblock-jenre {
+	color: black;
+	font-weight: bold;
 }
 
 .footer {
@@ -336,7 +354,7 @@
 	cursor: pointer;
 }
 
-.footer-control-btn {
+.footer-pause-btn {
 	width: 37px;
 	height: 37px;
 	border-radius: 37px;
@@ -346,7 +364,7 @@
 	cursor: pointer;
 }
 
-.footer-control-btn:after {
+.footer-pause-btn:after {
 	content: "";
 	display: block;
 	width: 11px;
