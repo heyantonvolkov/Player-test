@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('.hero .container').append(songTemplate({songs: songs2}));
 });
 
-  $(".hero-songblock-play").click(function(){
+  $(".container").on('click', ".hero-songblock-play", function() {
     var blockIndex = $(this).parent().index();
     if ($(".hero-songblock").eq(blockIndex).hasClass("is-paused")) {
       $(".hero-songblock").eq(blockIndex).removeClass("is-paused");
@@ -21,8 +21,15 @@ $(document).ready(function() {
     } else {
       $(".hero-songblock").removeClass("is-playing is-paused");
       $(".hero-songblock").eq(blockIndex).addClass("is-playing");
-      setSongInfo(songs[blockIndex].track, songs[blockIndex].band, songs[blockIndex].imgUrl, songs[blockIndex].songUrl);
-      play();
+      if (blockIndex<10) {
+        setSongInfo(songs[blockIndex].track, songs[blockIndex].band, songs[blockIndex].imgUrl, songs[blockIndex].songUrl);
+        play();
+      };
+      if (blockIndex>9) {
+        blockIndex -= 10;
+        setSongInfo(songs2[blockIndex].track, songs2[blockIndex].band, songs2[blockIndex].imgUrl, songs2[blockIndex].songUrl);
+        play();
+      }
     }
   });
 
@@ -33,7 +40,7 @@ $(document).ready(function() {
     $("#sound").attr("src", songUrl);
   }
 
-  $(".hero-songblock-pause").click(function(){
+  $(".container").on('click', ".hero-songblock-pause", function(){
     var blockIndex = $(this).parent().index();
     $(".hero-songblock").eq(blockIndex).addClass("is-paused");
     $(".hero-songblock").eq(blockIndex).removeClass("is-playing");
