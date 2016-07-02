@@ -4,21 +4,21 @@ var songs2 = [
     band: 'Tears of Lenin', 
     imgUrl: 'img/songs/song11-back.jpg', 
     songJenre: 'Starving Music',
-    songUrl: ''
+    songUrl: 'https://psv4.vk.me/c1314/u3424877/audios/2c845dcc0cc4.mp3?extra=9eZrgV9xl6IUFW0ZF8YSh4mocZRBxG3gIhvKghKkPvTzzB0mYIeToDCtmCX9knSB3fwBmdh-3baL3yinalae281Djyqt3Gd9teleFf1rkZVI_H87ZbeEGklkllAhmJICa-7M'
   },
   {
     track: 'Rich Bitch', 
     band: 'Doors', 
     imgUrl: 'img/songs/song12-back.jpg', 
     songJenre: 'Adult Music',
-    songUrl: ''
+    songUrl: 'https://psv4.vk.me/c1314/u3424877/audios/2c845dcc0cc4.mp3?extra=9eZrgV9xl6IUFW0ZF8YSh4mocZRBxG3gIhvKghKkPvTzzB0mYIeToDCtmCX9knSB3fwBmdh-3baL3yinalae281Djyqt3Gd9teleFf1rkZVI_H87ZbeEGklkllAhmJICa-7M'
   },
   {
     track: 'Paper Sumit', 
     band: 'Tuuber', 
     imgUrl: 'img/songs/song13-back.jpg', 
     songJenre: 'Rock Music',
-    songUrl: ''
+    songUrl: 'https://psv4.vk.me/c1314/u3424877/audios/2c845dcc0cc4.mp3?extra=9eZrgV9xl6IUFW0ZF8YSh4mocZRBxG3gIhvKghKkPvTzzB0mYIeToDCtmCX9knSB3fwBmdh-3baL3yinalae281Djyqt3Gd9teleFf1rkZVI_H87ZbeEGklkllAhmJICa-7M'
   },
   {
     track: "We are the champions", 

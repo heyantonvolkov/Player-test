@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
 
-  
+  console.log(songs2);
   var songTemplate = Handlebars.compile($("#song-template").html());
   $('.hero .container').html(songTemplate({songs: songs}));
 
   var playerTemplate = Handlebars.compile($("#player-ui-template").html());
   $('.footer-song-info').html(playerTemplate(songs[0]));
  
-  
+ $(".footer-btn-new").click(function(){
+    $('.hero .container').append(songTemplate({songs: songs2}));
+});
 
   $(".hero-songblock-play").click(function(){
     var blockIndex = $(this).parent().index();
@@ -55,5 +57,8 @@ $(document).ready(function() {
     audio.pause();
   }
   
+  $(function() {
+    $( "#slider" ).slider();
+  });
 
 });

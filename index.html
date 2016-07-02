@@ -30,18 +30,29 @@
         <img class="footer-numlist" src="img/ui/footer-numlist.png">
         <div class="footer-pause-btn"></div>
         <div class="footer-btn-new"></div>
-        <div class="footer-soundbar"></div>
+        
+        <section> 
+          <span class="tooltip"></span> 
+          <div id="slider"></div>
+          <span class="volume"></span>
+        </section>
+
+        <div class="footer-soundbar" id="slider"></div>
         <div class="footer-soundbar soundbar-red">
           <div class="footer-handler"></div>
         </div>
         <img class="footer-soundicon" src="img/ui/footer-soundicon.png">
       </div>
     </footer>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="data2.js"></script>
     <script type="text/javascript" src="handlebars.js"></script>
     <script src="script.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
     
 
     <script id="song-template" type="text/x-handlebars-template">

@@ -25,6 +25,7 @@
 	background-color: #1f1b1b;
 	width: 100vw;
 	position: fixed;
+	z-index: 5;
 }
 
 .logo {
@@ -132,10 +133,9 @@
 	height: 100vh;
 	background-color: #1f1b1b;
 	background-image: url("img/background.png");
-	padding: 12vh 0 75px;
+	padding: 12vh 0 20vh;
 	background-position: center;
 	background-size: cover;
-
 }
 
 .hero-songblock {
