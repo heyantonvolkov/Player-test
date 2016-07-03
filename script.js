@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var songs3 = new Object {};
+  var songs3 = {};
 
   $.ajax({ url: "https://api.github.com/users/jeresig", dataType: "jsonp", jsonpCallback: "logResults" });
   function logResults(json){ 
