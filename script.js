@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
-  $.getJSON('http://api.radioreddit.com/tracks/1', function(data){
-      console.log(data.title);
-    });
+
+  $.ajax({ url: "https://api.github.com/users/jeresig", dataType: "jsonp", jsonpCallback: "logResults" });
+  function logResults(json){ console.log(json); }
+
+  
 
 
   
@@ -72,6 +74,5 @@ $(document).ready(function() {
     $( "#slider" ).slider();
   });
 
-  console.log(blockIndex);
 
 });
