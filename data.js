@@ -4,7 +4,7 @@ var songs = [
     band: 'qween', 
     imgUrl: 'img/songs/song1-back.png', 
     songJenre: 'Pop Music',
-    songUrl: 'https://psv4.vk.me/c1314/u3424877/audios/2c845dcc0cc4.mp3?extra=9eZrgV9xl6IUFW0ZF8YSh4mocZRBxG3gIhvKghKkPvTzzB0mYIeToDCtmCX9knSB3fwBmdh-3baL3yinalae281Djyqt3Gd9teleFf1rkZVI_H87ZbeEGklkllAhmJICa-7M'
+    songUrl: 'https://s3.amazonaws.com/media.radioreddit.com/tracks/1/original?AWSAccessKeyId=AKIAIBWRCNFHV6VZPBYA&Expires=1467651683&Signature=99KwJ5dsoLzv1eiIX5WtrovvmDo%3D'
   },
   {
     track: 'Rich Bitch', 

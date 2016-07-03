@@ -12,7 +12,6 @@
 .body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 
 .container {
@@ -130,12 +129,13 @@
 
 
 .hero {
-	height: 100vh;
 	background-color: #1f1b1b;
 	background-image: url("img/background.png");
 	padding: 12vh 0 13vh;
 	background-position: center;
 	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh; 
 }
 
 .hero-songblock {
@@ -298,10 +298,11 @@
 .footer {
 	height: 60px;
 	background-color: #1f1b1b;
-	width: 100vw;
-	margin: -60px 0 0;
 	position: fixed;
 	z-index: +2;
+	bottom: 0;
+	right: 0;
+	left: 0;
 }
 
 .footer-song-pic {

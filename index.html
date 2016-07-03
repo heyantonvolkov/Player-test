@@ -48,11 +48,11 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="data2.js"></script>
     <script type="text/javascript" src="handlebars.js"></script>
     <script src="script.js"></script>
-    <script type="text/javascript" src="jquery-ui.min.js"></script>
     
 
     <script id="song-template" type="text/x-handlebars-template">
@@ -60,7 +60,7 @@
       <div class="hero-songblock">
           <img class="hero-songblock-pic hero-songblock-pic-top" src={{imgUrl}}>
           <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">{{songJenre}}</p>
+            <p class="hero-songblock-jenre">{{album.title}}</p>
           </div>
           <div class="hero-songblock-play"></div>
           <div class="hero-songblock-pause"></div>
@@ -72,9 +72,9 @@
     <script id="player-ui-template" type="text/x-handlebars-template">
             <img class="footer-song-pic" src={{imgUrl}}>
            <div class="footer-bitrate"></div>
-           <p class="footer-song footer-songname">{{track}}</p>
+           <p class="footer-song footer-songname">{{title}}</p>
            <p class="footer-controls footer-prev">--</p>
-           <p class="footer-song footer-singer">{{band}}</p>
+           <p class="footer-song footer-singer">{{artist.name}}</p>
            <p class="footer-controls footer-next">+</p>
            <p class="footer-songadress">VKontakte Public's Name &#9733</p>
            <audio id="sound" src=''></audio>
