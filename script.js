@@ -4,8 +4,8 @@ $(document).ready(function() {
   $.ajax({ url: "https://api.github.com/users/jeresig", dataType: "jsonp", jsonpCallback: "logResults" });
   function logResults(json){ console.log(json); }
 
-  
 
+  logResults(json);
 
   
   var songTemplate = Handlebars.compile($("#song-template").html());
