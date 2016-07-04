@@ -25,10 +25,15 @@ $(document).ready(function() {
           imgUrl: image.post_url
         }
       });
+      
+      var imagesHundred = images.slice(0,100);
 
-      for (var i=0; i<songs.length; ++i){
-        songs.push(images[i]);
+      for (var i=0; i<100; ++i){
+        songs[i].imgUrl = images[i].imgUrl;
       }
+
+      console.log(songs);
+
     });
 
     console.log(songs);
