@@ -2,14 +2,13 @@ $(document).ready(function() {
 
   window.blockIndex;
   window.songs = [];
-
+  var page = 0;
+  var perpage = 10;
 
   $.get("http://api.radioreddit.com/tracks", function(json){
     songInfo = json;
 
     songs = songInfo.map(function(song){
-      song.Album.title ? console.log(song.Album.title) : console.log("Yeah");
-
       return  {
         album: song.Album.title,
         band: song.Artist.name,
@@ -18,18 +17,43 @@ $(document).ready(function() {
       }
     });
 
+    $.get("https://unsplash.it/list", function(json){
+      imagesInfo = json;
+
+      images = imagesInfo.map(function(image){
+        return {
+          imgUrl: image.post_url
+        }
+      });
+
+      for (var i=0; i<songs.length; ++i){
+        songs.push(images[i]);
+      }
+    });
+
+    console.log(songs);
+
+    var songs1 = sliceSongs(songs);
+
     var songTemplate = Handlebars.compile($("#song-template").html());
-    $('.hero .container').html(songTemplate({songs: songs}));
+    $('.hero .container').html(songTemplate({songs: songs1}));
 
     var playerTemplate = Handlebars.compile($("#player-ui-template").html());
     $('.footer-song-info').html(playerTemplate(songs[0]));
   });
   
-
+  function sliceSongs (array) {
+    var result = array.slice(page*perpage, perpage+(page*perpage));
+    ++page
+    return result;
+  }
  
   $(".footer-btn-new").click(function(){
-    $('.hero .container').append(songTemplate({songs: songs2}));
-});
+    var moreSongs = sliceSongs(songs);
+    console.log(moreSongs);
+    var songTemplate = Handlebars.compile($("#song-template").html());
+    $('.hero .container').append(songTemplate({songs: moreSongs}));
+  });
 
   $(".container").on('click', ".hero-songblock-play", function() {
     blockIndex = $(this).parent().index();
@@ -73,8 +97,5 @@ $(document).ready(function() {
     audio.pause();
   }
   
-  $(function() {
-    $( "#slider" ).slider();
-  });
 
 });

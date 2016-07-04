@@ -163,17 +163,7 @@
 .hero-songblock-jenre {
 	font-size: 10px;
 	color: white;
-	padding: 15px 0 0 20px;
-}
-
-.hero-songblock-jenre:before {
-	content: "";
-	display: block;
-	width: 14px;
-	height: 8px;
-	background: url("img/ui/song-vk-icon.png");
-	margin: 2px 0 0 45px;
-	position: absolute;
+	padding: 15px 0 0;
 }
 
 .hero-songblock-play {
@@ -336,6 +326,13 @@
 	float: left;
 	font-size: 12px;
 	margin: 0 0 0 8px;
+}
+
+.footer-songname {
+	text-overflow: ellipsis;
+	max-width: 192px;
+	text-align: left;
+	white-space: nowrap;overflow: hidden;
 }
 
 .footer-controls {
