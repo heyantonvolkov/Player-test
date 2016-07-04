@@ -250,17 +250,20 @@
 
 .is-playing .hero-songblock-play{
 	display: block;
-	z-index: 2;
+	z-index: 3;
 }
 
 .is-playing .hero-songblock-pause {
 	display: block;
-	z-index: 2;
+	z-index: 3;
 }
 
 .is-playing .hero-songblock-bitrate {
 	display: block;
-	z-index: 1;
+	z-index: 2;
+	& .hero-songblock-bitrate:before {
+		z-index: 1;
+	}
 }
 
 .is-playing .hero-songblock-underblock {

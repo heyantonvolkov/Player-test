@@ -1,14 +1,6 @@
 $(document).ready(function() {
 
-  window.songs3 = {};
-
-  $.ajax({ url: "https://api.github.com/users/jeresig", dataType: "jsonp", jsonpCallback: "logResults" });
-  function logResults(json){ 
-    console.log(json);
-    songs3 = json;
-  }
-
-  console.log(songs3);
+  window.blockIndex;
 
   var songTemplate = Handlebars.compile($("#song-template").html());
   $('.hero .container').html(songTemplate({songs: songs}));
@@ -21,7 +13,7 @@ $(document).ready(function() {
 });
 
   $(".container").on('click', ".hero-songblock-play", function() {
-    var blockIndex = $(this).parent().index();
+    blockIndex = $(this).parent().index();
     if ($(".hero-songblock").eq(blockIndex).hasClass("is-paused")) {
       $(".hero-songblock").eq(blockIndex).removeClass("is-paused");
       $(".hero-songblock").eq(blockIndex).addClass("is-playing");
@@ -49,7 +41,7 @@ $(document).ready(function() {
   }
 
   $(".container").on('click', ".hero-songblock-pause", function(){
-    var blockIndex = $(this).parent().index();
+    blockIndex = $(this).parent().index();
     $(".hero-songblock").eq(blockIndex).addClass("is-paused");
     $(".hero-songblock").eq(blockIndex).removeClass("is-playing");
     pause();
@@ -57,7 +49,6 @@ $(document).ready(function() {
 
   $(".footer-pause-btn").click(function(){
     pause();
-    var blockIndex = $('.is-playing').index();
     $(".hero-songblock").eq(blockIndex).addClass("is-paused");
     $(".hero-songblock").eq(blockIndex).removeClass("is-playing");
   });
@@ -75,6 +66,5 @@ $(document).ready(function() {
   $(function() {
     $( "#slider" ).slider();
   });
-
 
 });
