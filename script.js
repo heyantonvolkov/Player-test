@@ -1,12 +1,31 @@
 $(document).ready(function() {
 
   window.blockIndex;
+  window.songs = [];
 
-  var songTemplate = Handlebars.compile($("#song-template").html());
-  $('.hero .container').html(songTemplate({songs: songs}));
 
-  var playerTemplate = Handlebars.compile($("#player-ui-template").html());
-  $('.footer-song-info').html(playerTemplate(songs[0]));
+  $.get("http://api.radioreddit.com/tracks", function(json){
+    songInfo = json;
+
+    songs = songInfo.map(function(song){
+      song.Album.title ? console.log(song.Album.title) : console.log("Yeah");
+
+      return  {
+        album: song.Album.title,
+        band: song.Artist.name,
+        path: song.media.original,
+        track: song.title
+      }
+    });
+
+    var songTemplate = Handlebars.compile($("#song-template").html());
+    $('.hero .container').html(songTemplate({songs: songs}));
+
+    var playerTemplate = Handlebars.compile($("#player-ui-template").html());
+    $('.footer-song-info').html(playerTemplate(songs[0]));
+  });
+  
+
  
   $(".footer-btn-new").click(function(){
     $('.hero .container').append(songTemplate({songs: songs2}));
@@ -21,23 +40,14 @@ $(document).ready(function() {
     } else {
       $(".hero-songblock").removeClass("is-playing is-paused");
       $(".hero-songblock").eq(blockIndex).addClass("is-playing");
-      if (blockIndex<10) {
-        setSongInfo(songs[blockIndex].track, songs[blockIndex].band, songs[blockIndex].imgUrl, songs[blockIndex].songUrl);
-        play();
-      };
-      if (blockIndex>9) {
-        blockIndex -= 10;
-        setSongInfo(songs2[blockIndex].track, songs2[blockIndex].band, songs2[blockIndex].imgUrl, songs2[blockIndex].songUrl);
-        play();
-      }
+      setSongInfo();
+      play();
     }
   });
 
-  function setSongInfo(track, band, imgUrl, songUrl) {
-    $(".footer-songname").text(track);
-    $(".footer-singer").text(band);
-    $(".footer-song-pic").attr("src", imgUrl);
-    $("#sound").attr("src", songUrl);
+  function setSongInfo() {
+    var playerTemplate = Handlebars.compile($("#player-ui-template").html());
+    $('.footer-song-info').html(playerTemplate(songs[blockIndex]));
   }
 
   $(".container").on('click', ".hero-songblock-pause", function(){

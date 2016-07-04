@@ -1,4 +1,4 @@
-var songs = [
+var songs3 = [
   {
     track: 'We are the champions', 
     band: 'qween', 
