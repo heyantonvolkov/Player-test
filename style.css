@@ -4,18 +4,17 @@
 }
 
 * {
-	text-align: center;
 	box-sizing: border-box;
-	font-family: "stuilight";
 }
 
 .body {
 	margin: 0;
 	padding: 0;
+	font-family: "stuilight";
 }
 
 .container {
-	width: 1240px;
+	padding: 0 40px;
 	margin: 0 auto 0;
 }
 
@@ -25,6 +24,7 @@
 	width: 100vw;
 	position: fixed;
 	z-index: 5;
+	text-align: center;
 }
 
 .logo {
@@ -139,11 +139,12 @@
 }
 
 .hero-songblock {
-	margin: 15px 10px 15px;
+	margin: 15px 10px;
 	display: inline-block;
 	width: 200px;
 	height: 260px;
 	box-sizing: border-box;
+	text-align: center;
 	box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
@@ -298,6 +299,7 @@
 	bottom: 0;
 	right: 0;
 	left: 0;
+	text-align: center;
 }
 
 .footer-song-pic {
@@ -378,7 +380,7 @@
 }
 
 .footer-btn-new {
-	margin: -37px 0 0 660px;
+	margin: -37px 0 0 720px;
 	width: 37px;
 	height: 37px;
 	border-radius: 37px;
@@ -386,8 +388,6 @@
 	border: 2px solid #757575;
 	cursor: pointer;
 }
-
-
 
 .footer-soundicon {
 	float: right;
@@ -420,11 +420,27 @@
 	cursor: pointer;
 }
 
-.ui-slider-handle:focus {
-	outline: none;
-}
 
-.ui-slider-range {
-	background-color: red;
-	position: absolute;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

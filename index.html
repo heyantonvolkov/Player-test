@@ -1,74 +1,72 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>WebHell Radio</title>
-  </head>
-  <body class="body">
-    <header class="header">
-      <div class="container">
-        <img src="img/ui/logo.png" alt="" class="logo">
-        <a class="header-btn header-popular header-btn-active">Popular</a>
-        <a class="header-btn header-favourite">My favourite</a>
-        <input type="text" class="header-search" placeholder="Search">
-        <img class="header-search-icon" src="img/ui/search-icon.png">
-        <a class="header-login">Login</a>
-        <a class="header-btn header-about">About</a>
-      </div>
-    </header>
-    <div class="hero">
-      <div class="container">
 
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>WebHell Radio</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="container">
+      <img src="img/ui/logo.png" alt="" class="logo">
+      <a class="header-btn header-popular header-btn-active">Popular</a>
+      <a class="header-btn header-favourite">My favourite</a>
+      <input type="text" class="header-search" placeholder="Search">
+      <img class="header-search-icon" src="img/ui/search-icon.png">
+      <a class="header-login">Login</a>
+      <a class="header-btn header-about">About</a>
     </div>
+  </header>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-song-info"></div>
-        <img class="footer-numlist" src="img/ui/footer-numlist.png">
-        <div class="footer-pause-btn"></div>
-        <div class="footer-btn-new"></div>
-        <div class="volume-slider" id="slider"></div>
-        <img class="footer-soundicon" src="img/ui/footer-soundicon.png">
+  <div class="hero">
+    <div class="container"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-song-info"></div>
+      <img class="footer-numlist" src="img/ui/footer-numlist.png">
+      <div class="footer-pause-btn"></div>
+      <div class="footer-btn-new"></div>
+      <input  id="slider" class="volume-slider" min="0" max="100">
+      <img class="footer-soundicon" src="img/ui/footer-soundicon.png">
+    </div>
+  </footer>
+
+  <script id="song-template" type="text/x-handlebars-template">
+    {{#each songs}}
+    <div class="hero-songblock">
+      <img class="hero-songblock-pic hero-songblock-pic-top" src={{imgUrl}}>
+      <div class="hero-songblock-underblock">
+        <p class="hero-songblock-jenre">{{album}}</p>
       </div>
-    </footer>
+      <div class="hero-songblock-play"></div>
+      <div class="hero-songblock-pause"></div>
+      <div class="hero-songblock-bitrate"></div>
+    </div>
+    {{/each}}
+  </script>
 
+  <script id="player-ui-template" type="text/x-handlebars-template">
+    <img class="footer-song-pic" src={{imgUrl}}>
+    <div class="footer-bitrate"></div>
+    <p class="footer-song footer-songname">{{track}}</p>
+    <p class="footer-controls footer-prev">--</p>
+    <p class="footer-song footer-singer">{{band}}</p>
+    <p class="footer-controls footer-next">+</p>
+    <p class="footer-songadress">VKontakte Public's Name &#9733</p>
+    <audio id="sound" src={{path}}></audio>
+  </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+  <script type="text/javascript" src="handlebars.js"></script>
+  <script type="text/javascript" src="rangeslider.js"></script>
+  <script src="script.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script type="text/javascript" src="handlebars.js"></script>
-    <script src="script.js"></script>
-    
-    
+</body>
 
-    <script id="song-template" type="text/x-handlebars-template">
-     {{#each songs}}
-      <div class="hero-songblock">
-          <img class="hero-songblock-pic hero-songblock-pic-top" src={{imgUrl}}>
-          <div class="hero-songblock-underblock">
-            <p class="hero-songblock-jenre">{{album}}</p>
-          </div>
-          <div class="hero-songblock-play"></div>
-          <div class="hero-songblock-pause"></div>
-          <div class="hero-songblock-bitrate"></div>
-        </div>
-     {{/each}}
-    </script>
-
-    <script id="player-ui-template" type="text/x-handlebars-template">
-            <img class="footer-song-pic" src={{imgUrl}}>
-           <div class="footer-bitrate"></div>
-           <p class="footer-song footer-songname">{{track}}</p>
-           <p class="footer-controls footer-prev">--</p>
-           <p class="footer-song footer-singer">{{band}}</p>
-           <p class="footer-controls footer-next">+</p>
-           <p class="footer-songadress">VKontakte Public's Name &#9733</p>
-           <audio id="sound" src={{path}}></audio>
-    </script>
-
-
-  </body>
 </html>
