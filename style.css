@@ -14,8 +14,8 @@
 }
 
 .container {
-	padding: 0 40px;
-	margin: 0 auto 0;
+	width: 1240px;
+	margin: 0 auto;
 }
 
 .header {
@@ -92,7 +92,7 @@
 
 .header-search-icon {
 	position: absolute;
-	margin: 20px 0 0 -390px;
+	margin: 20px 0 0 -330px;
 }
 
 .header-login {
@@ -134,7 +134,8 @@
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-	min-height: 100vh; 
+	min-height: 100vh;
+	text-align: center;
 }
 
 .hero-songblock {
