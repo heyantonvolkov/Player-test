@@ -1,5 +1,5 @@
 @font-face {
-	src: url("fonts/sfuilight.ttf");
+	src: url("/fonts/sfuilight.ttf");
 	font-family: "stuilight";
 }
 
@@ -129,7 +129,7 @@
 
 .hero {
 	background-color: #1f1b1b;
-	background-image: url("img/background.png");
+	background-image: url("/img/background.png");
 	padding: 12vh 0 13vh;
 	background-position: center;
 	background-size: cover;
@@ -186,7 +186,7 @@
 	display: block;
 	width: 21px;
 	height: 24px;
-	background: url("img/ui/song-play.png");
+	background: url("/img/ui/song-play.png");
 	position: absolute;
 	margin: 26px 0 0 30px;
 }
@@ -208,7 +208,7 @@
 	display: block;
 	width: 14px;
 	height: 20px;
-	background: url("img/ui/song-pause.png");
+	background: url("/img/ui/song-pause.png");
 	position: absolute;
 	margin: 26px 0 0 28px;
 }
@@ -216,7 +216,7 @@
 .hero-songblock-bitrate {
 	width: 14px;
 	height: 12px;
-	background-image: url("img/ui/song-bitrate.png");
+	background-image: url("/img/ui/song-bitrate.png");
 	position: absolute;
 	margin: -250px 0 0 10px;
 	display: none;
@@ -320,7 +320,7 @@
 	float: left;
 	width: 14px;
 	height: 12px;
-	background-image: url("img/ui/footer-bitrate.png");
+	background-image: url("/img/ui/footer-bitrate.png");
 }
 
 .footer-song {
@@ -374,7 +374,7 @@
 	display: block;
 	width: 11px;
 	height: 15px;
-	background-image: url("img/ui/footer-pause-white.png");
+	background-image: url("/img/ui/footer-pause-white.png");
 	position: absolute;
 	margin: 9px 0 0 11px;
 }

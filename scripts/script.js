@@ -48,6 +48,12 @@ $(document).ready(function() {
     }
   });
 
+  $(".footer-btn-new").click(function(){
+    var moreSongs = sliceSongs(songs);
+    var songTemplate = Handlebars.compile($("#song-template").html());
+    $('.hero .container').append(songTemplate({songs: moreSongs}));
+  });
+
   $(".container").on('click', ".hero-songblock-pause", function(){
     var block = $(this).parent();
     block.addClass("is-paused").removeClass("is-playing");
