@@ -5,6 +5,12 @@ $(document).ready(function() {
   var page = 0;
   var perpage = 10;
 
+
+
+  $('#slider').slider({
+  });
+
+
   $.get("http://api.radioreddit.com/tracks", function(json){
     songInfo = json;
 
@@ -13,7 +19,8 @@ $(document).ready(function() {
         album: song.Album.title,
         band: song.Artist.name,
         path: song.media.original,
-        track: song.title
+        track: song.title,
+        imgUrl: "https://source.unsplash.com/random"
       }
     });
 
@@ -102,5 +109,5 @@ $(document).ready(function() {
     audio.pause();
   }
   
-
+  
 });

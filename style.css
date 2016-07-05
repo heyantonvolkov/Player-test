@@ -387,23 +387,29 @@
 	cursor: pointer;
 }
 
-.footer-soundbar {
+
+
+.footer-soundicon {
+	float: right;
+	margin: -26px 140px; 0 0;
+	cursor: pointer;
+}
+
+.volume-slider {
 	width: 121px;
 	height: 4px;
 	background-color: #434343;
 	border-radius: 2px;
 	float: right;
 	margin: -20px 0 0;
-	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	box-shadow: 0 0 3px rgba(0,0,0,0.5); 
 }
 
-.soundbar-red {
-	background-color: #ff192e;
-	width: 60px;
-	margin: -20px 61px 0 0;
+.volume-slider:focus {
+	outline: none;
 }
 
-.footer-handler {
+.ui-slider-handle {
 	width: 14px;
 	height: 14px;
 	border-radius: 14px;
@@ -414,8 +420,11 @@
 	cursor: pointer;
 }
 
-.footer-soundicon {
-	float: right;
-	margin: -26px 140px; 0 0;
-	cursor: pointer;
+.ui-slider-handle:focus {
+	outline: none;
+}
+
+.ui-slider-range {
+	background-color: red;
+	position: absolute;
 }
