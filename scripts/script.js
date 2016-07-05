@@ -1,11 +1,10 @@
 $(document).ready(function() {
 
-  window.blockIndex;
   window.songs = [];
   var page = 0;
   var perpage = 10;
 
-
+  console.log($(".volume-slider").val());
 
   $.get("http://api.radioreddit.com/tracks", function(json){
     songInfo = json;
@@ -31,47 +30,38 @@ $(document).ready(function() {
   
   function sliceSongs (array) {
     var result = array.slice(page*perpage, perpage+(page*perpage));
-    ++page
+    page++
     return result;
   }
  
-  $(".footer-btn-new").click(function(){
-    var moreSongs = sliceSongs(songs);
-    console.log(moreSongs);
-    var songTemplate = Handlebars.compile($("#song-template").html());
-    $('.hero .container').append(songTemplate({songs: moreSongs}));
-  });
-
   $(".container").on('click', ".hero-songblock-play", function() {
-    blockIndex = $(this).parent().index();
-    if ($(".hero-songblock").eq(blockIndex).hasClass("is-paused")) {
-      $(".hero-songblock").eq(blockIndex).removeClass("is-paused");
-      $(".hero-songblock").eq(blockIndex).addClass("is-playing");
+    var block = $(this).parent();
+    $('.hero-songblock').removeClass('is-playing is-paused');
+
+    if (block.hasClass("is-paused")) {
+      block.removeClass("is-paused").addClass("is-playing");
       play();
     } else {
-      $(".hero-songblock").removeClass("is-playing is-paused");
-      $(".hero-songblock").eq(blockIndex).addClass("is-playing");
-      setSongInfo();
+      block.addClass("is-playing");
+      setSongInfo($(this).parent().index());
       play();
     }
   });
 
-  function setSongInfo() {
-    var playerTemplate = Handlebars.compile($("#player-ui-template").html());
-    $('.footer-song-info').html(playerTemplate(songs[blockIndex]));
-  }
-
   $(".container").on('click', ".hero-songblock-pause", function(){
-    blockIndex = $(this).parent().index();
-    $(".hero-songblock").eq(blockIndex).addClass("is-paused");
-    $(".hero-songblock").eq(blockIndex).removeClass("is-playing");
+    var block = $(this).parent();
+    block.addClass("is-paused").removeClass("is-playing");
     pause();
   });
 
+  function setSongInfo(songIndex) {
+    var playerTemplate = Handlebars.compile($("#player-ui-template").html());
+    $('.footer-song-info').html(playerTemplate(songs[songIndex]));
+  }
+
   $(".footer-pause-btn").click(function(){
     pause();
-    $(".hero-songblock").eq(blockIndex).addClass("is-paused");
-    $(".hero-songblock").eq(blockIndex).removeClass("is-playing");
+    $(".hero-songblock .is-playing").addClass("is-paused").removeClass("is-playing");
   });
 
   function play() {
@@ -84,5 +74,9 @@ $(document).ready(function() {
     audio.pause();
   }
   
+  $(".volume-slider").on('change', function(){
+    var audio = $('#sound')[0];
+    audio.volume = $(this).val()/100;
+  })
   
 });
