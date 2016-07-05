@@ -80,7 +80,6 @@
 	color: grey;
 	margin: 10px 0 0;
 	float: left;
-	cursor: pointer;
 }
 
 .header-search:focus {
@@ -93,7 +92,7 @@
 
 .header-search-icon {
 	position: absolute;
-	margin: 20px 0 0 -330px;
+	margin: 20px 0 0 -390px;
 }
 
 .header-login {
@@ -419,7 +418,6 @@
 	margin: -5px 0 0;
 	cursor: pointer;
 }
-
 
 
 
